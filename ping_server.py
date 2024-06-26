@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/ip', methods=['GET'])
 def get_ip():
     domain = request.args.get('domain', 'google.com')
-    timeout = request.args.get('timeout', '1')  # 默认超时时间设置为2秒
+    timeout = request.args.get('timeout', '2')  # 默认超时时间设置为2秒
     
     try:
         # 运行带超时参数的 ping 命令
